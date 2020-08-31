@@ -1,26 +1,74 @@
 {% load static %}
-<html>
+<html style="scroll-behavior: smooth;">
     <head>
-        <title>Welcome to Suneronit</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <title>Suneronit</title>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
 
-
     <body>
 
+        <img class="img1" src="https://www.cybersafe.news/wp-content/uploads/2018/10/ethical-hackers-800x400.jpg">
+
         <div class="page-header">
-            <h1><a href="/">Suneronit</a></h1>
+            <h1 class="header"><a href="{% url 'post_list' %}">-Suneronit-</a></h1>
         </div>
 
-        <div class="content container">
+
+        <div class="welcome_background"></div>
+        <div class="welcome_part" style="position: absolute; top: 170pt; left: 50pt; margin: 0 0 0 15pt;">
+            <div class="welcome_text" style="font-family: arial; color: white;">
+                <h2 style="font-size: 25pt;"> <b>Welcome to Suneronit!</b></h2>
+                <p style="font-size: 15pt;"> An online blog about my computer science adventures and 
+                    uni life.
+                </p>
+            </div>
+
+            <div class="welcome_buttons" style="position: absolute; top: 125pt;">
+                <a href="#blog_section" style="text-decoration: none; color: white; 
+                background-color: #0A83FF; font-family: arial; font-weight: bold; padding: 12px 16px; 
+                border: 1px solid #0A83FF; border-radius: 6px;">See more</a>
+            </div>
+        </div> 
+
+        
+        <div class="content_container" id="blog_section" style="position: absolute; top: 730px; 
+        left: 250px; border: 1px solid black; width: 1000px; border-radius: 6px; 
+        background-color: #c5c4c448; margin: 5pt 0 155pt 0;">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8" style="margin: 0 50px 0 50px; font-family: arial;">
                     {% block content %}
                     {% endblock %}
                 </div>
+            </div>
+        </div>
+
+        
+        <div class="footer" style="position: fixed; top: 388pt; left: 0;">
+            <div class="footer_back"></div>
+            <p class="footer_heading">-Suneronit 2020-</p>
+
+            <div class="footer_a">
+                <a class="footer_a_1" href="https://github.com/efesuner12/">
+                    <img class="footer_a_1_img" src="https://image.flaticon.com/icons/png/512/25/25231.png"> 
+                </a>
+
+                <div class="footer_hr_1"></div>
+
+                <a class="footer_a_2" href="https://www.instagram.com/efesuner12/">
+                    <img class="footer_a_2_img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/768px-Instagram_icon.png">
+                </a>
+
+                <div class="footer_hr_2"></div>
+
+                <a class=" footer_a_3" href="https://www.facebook.com/efe.suner.7">
+                    <img class="footer_a_3_img" src="https://cdn4.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_Facebook-512.png">
+                </a>
+
+                <div class="footer_hr_3"></div>
+
+                <a class="footer_a_4" href="mailto:efesuner2001@hotmail.com?" target="_top">
+                    <img class="footer_a_4_img" src="https://images.vexels.com/media/users/3/140137/isolated/preview/d5ce03b9b26818e8020ad0972de98baa-email-round-icon-by-vexels.png">
+                </a>
             </div>
         </div>
 
